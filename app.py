@@ -7,7 +7,7 @@ from rpy2.robjects import pandas2ri
 pandas2ri.activate()
 
 # Cargar el modelo RDS
-@st.cache_resource
+#@st.cache_resource
 def cargar_modelo():
     with open('model.rds', 'rb') as file:
         modelo_r = robjects.r['readRDS'](file)
